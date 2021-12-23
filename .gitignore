@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+vcpkg_installed/
+Debug/
+Release/
+*.user
+AppFiles.zip
+UpdateFiles.zip
+*.aps
+.vs/

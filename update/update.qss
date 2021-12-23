@@ -1,0 +1,107 @@
+* {
+    font-family: Microsoft YaHei;
+}
+
+/* 通用 */
+QPushButton {
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #FFFFFF;
+  outline: 0px;
+}
+
+QPushButton[clr="red"] {
+  margin: 2px;
+  background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #FF6363,stop:1 #F02F2F);
+}
+
+QPushButton[clr="red"]:hover {
+  margin: 0px;
+  background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #FF7C7C,stop:1 #F11D1D);
+}
+
+QPushButton[clr="blue"] {
+  margin: 2px;
+  background-color: #4DC7ED;
+}
+
+QPushButton[clr="blue"]:hover {
+  margin: 0px;
+  background-color: #6AD8FA;
+}
+
+QPushButton[clr="gray"] {
+  margin: 2px;
+  background-color: #263746;
+}
+
+QPushButton[clr="gray"]:hover {
+  margin: 0px;
+  background-color: #2E3E4C;
+}
+
+
+#client_centralWidget {
+  border: none;
+  background-color: #ffffff;
+}
+
+#client_widgetTop {
+  image: url(:/update/images/bk.png);
+}
+
+#client_widgetBottom {
+  border: none;
+  background-color: #ffffff;
+}
+
+
+#update_btnMin {
+  border: none;
+  image: url(:/update/images/min.png);
+}
+
+#update_btnClose {
+  border: none;
+  image: url(:/update/images/close.png);
+}
+
+
+#client_btnUpdate, #client_btnFinish {
+  font-size: 13px;
+  background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #76E9FF,stop:1 #55AAFF);
+  border-radius: 27px;
+}
+
+#client_lblMsg {
+  font-size: 24px;
+  color: #333333;
+}
+
+#client_chkNotShow::indicator:checked {
+  image: url(:/update/images/radio_check.png);
+}
+
+#client_chkNotShow::indicator:unchecked {
+  image: url(:/update/images/radio_uncheck.png);
+}
+
+#update_list {
+  border: none;
+  background-color: transparent;
+}
+
+#listItem_chk::indicator:checked {
+  image: url(:/update/images/check.png);
+}
+
+#listItem_chk::indicator:unchecked {
+  image: url(:/update/images/uncheck.png);
+}
+
+#listItem_lbl {
+  font-size: 16px;
+  color: #6BA8D5;
+}

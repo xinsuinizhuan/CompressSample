@@ -1,0 +1,619 @@
+* {
+    font-family: Microsoft YaHei;
+}
+
+/*QScrollBar Style*/
+/*纵向滚动条*/
+QScrollBar:vertical {
+    background: transparent; /*背景透明*/
+    width: 10px; /*宽度*/
+    margin: 0px 0px 0px 0px; /**/
+    padding-top: 12px; /*距离上面12px*/
+    padding-bottom: 12px; /*距离底部12px*/
+}
+/*横向滚动条*/
+QScrollBar:horizontal {
+    background: transparent;
+    height: 10px; /*高度*/
+    margin: 0px 0px 0px 0px;
+    padding-left: 12px; /*距离左边12px*/
+    padding-right: 12px; /*距离右边12px*/
+}
+
+/*当鼠标放到纵向或者横向滚动条上面时*/
+QScrollBar:vertical:hover,QScrollBar:horizontal:hover {
+    background: rgba(0, 0, 0, 30); /*修改背景透明度 30*/
+    border-radius: 5px; /*圆角*/
+}
+
+/*纵向滚动条上面的滑块*/
+QScrollBar::handle:vertical {
+    background: rgba(0, 0, 0, 50);
+    width: 10px;
+    border-radius: 5px;
+    border: none;
+}
+/*横向滚动条上面的滑块*/
+QScrollBar::handle:horizontal {
+    background: rgba(0, 0, 0, 50);
+    height: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+/*当鼠标放到滚动条滑块上面时改变透明度实现颜色的深浅变化*/
+QScrollBar::handle:vertical:hover,QScrollBar::handle:horizontal:hover {
+    background: rgba(0, 0, 0, 100);
+}
+
+/*纵向滚动条下部分块*/
+QScrollBar::add-page:vertical {
+    width: 10px;
+    background: transparent;
+}
+/*横向滚动条后面部分块*/
+QScrollBar::add-page:horizontal {
+    height: 10px;
+    background: transparent;
+}
+/*纵向滚动条上面部分块*/
+QScrollBar::sub-page:vertical {
+    width: 10px;
+    background: transparent;
+}
+/*横向滚动条左部分块*/
+QScrollBar::sub-page:horizontal {
+    height: 10px;
+    background: transparent;
+}
+/*纵向滚动条顶部三角形位置*/
+QScrollBar::sub-line:vertical {
+    height: 12px;
+    width: 10px;
+    background: transparent;
+    subcontrol-position: top;
+}
+/*横向滚动条左侧三角形位置*/
+QScrollBar::sub-line:horizontal {
+    height: 10px;
+    width: 12px;
+    background: transparent;
+    subcontrol-position: left;
+}
+/*纵向滚动条向上的三角形小图标*/
+QScrollBar::up-arrow:vertical {
+    image: url(:/images/images/scrollbar_arrowup_normal.png);
+}
+/*横向滚动条左边的三角形小图标*/
+QScrollBar::left-arrow:horizontal {
+    image: url(:/images/images/scrollbar_arrowleft_normal.png);
+}
+/*纵向滚动条向上的三角形小图标 鼠标悬停*/
+QScrollBar::up-arrow:vertical:hover {
+    image: url(:/images/images/scrollbar_arrowup_down.png);
+}
+/*横向滚动条左边的三角形小图标 鼠标悬停*/
+QScrollBar::left-arrow:horizontal:hover {
+    image: url(:/images/images/scrollbar_arrowleft_down.png);
+}
+/*纵向滚动条向上的三角形小图标 鼠标按下*/
+QScrollBar::up-arrow:vertical:pressed {
+    image: url(:/images/images/scrollbar_arrowup_highlight.png);
+}
+/*横向滚动条左边的三角形小图标 鼠标按下*/
+QScrollBar::left-arrow:horizontal:pressed {
+    image: url(:/images/images/scrollbar_arrowleft_highlight.png);
+}
+
+/*纵向滚动条下面三角形部分*/
+QScrollBar::add-line:vertical {
+    height: 12px;
+    width: 10px;
+    background: transparent;
+    subcontrol-position: bottom;
+}
+/*横向滚动条右边的三角形部分*/
+QScrollBar::add-line:horizontal {
+    height: 10px;
+    width: 12px;
+    background: transparent;
+    subcontrol-position: right;
+}
+/*纵向滚动条下面三角形图标*/
+QScrollBar::down-arrow:vertical {
+    image: url(:/images/images/scrollbar_arrowdown_normal.png);
+}
+/*横向滚动条右侧三角形图标*/
+QScrollBar::right-arrow:horizontal {
+    image: url(:/images/images/scrollbar_arrowright_normal.png);
+}
+/*纵向滚动条下面三角形图标 鼠标悬停*/
+QScrollBar::down-arrow:vertical:hover {
+    image: url(:/images/images/scrollbar_arrowdown_down.png);
+}
+/*横向滚动条右侧三角形图标 鼠标悬停*/
+QScrollBar::right-arrow:horizontal:hover {
+    image: url(:/images/images/scrollbar_arrowright_down.png);
+}
+/*纵向滚动条下面三角形图标 鼠标按下*/
+QScrollBar::down-arrow:vertical:pressed {
+    image: url(:/images/images/scrollbar_arrowdown_highlight.png);
+}
+/*横向滚动条右侧三角形图标 鼠标按下*/
+QScrollBar::right-arrow:horizontal:pressed {
+    image: url(:/images/images/scrollbar_arrowright_highlight.png);
+}
+
+/* 通用 */
+QPushButton {
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #FFFFFF;
+  outline: 0px;
+}
+
+QPushButton[clr="red"] {
+  margin: 2px;
+  background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #FF6363,stop:1 #F02F2F);
+}
+
+QPushButton[clr="red"]:hover {
+  margin: 0px;
+  background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #FF7C7C,stop:1 #F11D1D);
+}
+
+QPushButton[clr="blue"] {
+  margin: 2px;
+  background-color: #4DC7ED;
+}
+
+QPushButton[clr="blue"]:hover {
+  margin: 0px;
+  background-color: #6AD8FA;
+}
+
+QPushButton[clr="gray"] {
+  margin: 2px;
+  background-color: #263746;
+}
+
+QPushButton[clr="gray"]:hover {
+  margin: 0px;
+  background-color: #2E3E4C;
+}
+
+
+
+/* mainWnd */
+#client_centralWidget {
+  border: none;
+  background-color: #ffffff;
+}
+
+#client_widgetTop {
+  background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #F9FCFF,stop:1 #D2E9FF);
+}
+
+#client_labelLogo {
+  border: none;
+  image: url(:/images/images/logo.png);
+}
+
+#client_labelTitle {
+  font-size: 13px;
+  color: #333333;
+}
+
+#client_pushButtonMin {
+  border: none;
+  image: url(:/images/images/min.png);
+}
+
+#client_pushButtonMax {
+  border: none;
+  image: url(:/images/images/max.png);
+}
+
+#client_pushButtonClose {
+  border: none;
+  image: url(:/images/images/close.png);
+}
+
+QToolButton::menu-indicator { 
+    image: none;
+}
+
+#client_toolButtonFile, #client_toolButtonOperate, #client_toolButtonSetting, #client_toolButtonHelp {
+  border: none;
+  font-size: 12px;
+  color: #333333;
+}
+
+#client_pushButtonUp {
+  border: none;
+  image: url(:/images/images/up.png);
+}
+
+
+#client_pushButtonDesktop {
+  border: none;
+  image: url(:/images/images/desktop.png);
+}
+
+
+#client_pushButtonLayout {
+  border: none;
+  image: url(:/images/images/layout.png);
+}
+
+#client_widgetPath {
+  border: none;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+
+#client_lineEditPath {
+  border: none;
+}
+
+#client_pushButtonDown {
+  border: none;
+  image: url(:/images/images/down.png);
+}
+
+#client_pushButtonSearch {
+  border: none;
+  image: url(:/images/images/search.png);
+}
+
+#client_editSearch {
+  border: none;
+  background-color: #ffffff;
+}
+
+#client_widgetSearch {
+  border: none;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+#client_pushButtonNew, #client_pushButtonExtractTo, #client_pushButtonOneKeyExtractTo, #client_pushButtonDel, #client_pushButtonTool {
+  font-size: 12px;
+  color: #333333;
+  border: none;
+}
+
+#client_labelDoing {
+  font-size: 11px;
+  color: #aaaaaa;
+}
+
+#client_widgetBottom {
+  border: none;
+  background-color: #F9FAFB;
+}
+
+#client_tableFile {
+  border: none;
+  color: #000000;
+  selection-color: #ffffff;
+  selection-background-color: #0078D7;
+  font-size: 11px;
+}
+
+#client_tableFile QHeaderView::section {
+  color: black;
+  padding-left: 4px;
+  border-right: 1px solid #6c6c6c;
+  padding-left: 2px;
+}
+
+#extractOptionDialog_centralWidget {
+  border: none;
+  background-color: #ffffff;
+}
+
+#extractOptionDialog_widgetTitle {
+  border: none;
+  background-color: #E1F0FD;
+}
+
+#extractOptionDialog_lblTitle {
+  font-size: 12px;
+  color: #777777;
+}
+
+#extractOptionDialog_lblLogo {
+  image: url(:/images/images/logo.png);
+}
+
+#extractOptionDialog_lblTips {
+  font-size: 13px;
+  color: #333333;
+}
+
+#extractOptionDialog_pushButtonBrowser {
+  border: none;
+  image: url(:/images/images/folder.png);
+}
+
+#extractOptionDialog_pushButtonClose {
+  border: none;
+  image: url(:/images/images/close2.png);
+}
+
+#extractOptionDialog_pushButtonExtract {
+  border: none;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #55AAFF;
+}
+
+#extractOptionDialog_widgetFolder {
+  border-radius: 8px;
+  border: 1px solid #D7E1EB;
+}
+
+#extractOptionDialog_lineEditFolder {
+  border: none;
+  color: #333333;
+  font-size: 12px;
+}
+
+
+#extractProgressDialog_centralWidget {
+  border: none;
+  background-color: #ffffff;
+}
+
+#extractProgressDialog_widgetTitle {
+  border: none;
+  background-color: #E1F0FD;
+}
+
+#extractProgressDialog_lblTitle {
+  font-size: 12px;
+  color: #777777;
+}
+
+#extractProgressDialog_pushButtonClose {
+  border: none;
+  image: url(:/images/images/close2.png);
+}
+
+#extractProgressDialog_lblLogo {
+  image: url(:/images/images/logo.png);
+}
+
+#extractProgressDialog_labelCurrentFile {
+  font-size: 12px;
+  color: #333333;
+}
+
+#extractProgressDialog_pushButtonOK, #extractProgressDialog_pushButtonCancel {
+  border: none;
+  border-radius: 8px;
+  border: 1px solid #D7E1EB;
+  color: #333333;
+  font-size: 13px;
+}
+
+#extractProgressDialog_progressBar {
+  background: #E0EBF4;
+  border-radius: 5px;
+}
+
+#extractProgressDialog_progressBar:chunk {
+  background: #66BCFF;
+  border-radius: 5px;
+}
+
+
+/* MsgWnd */
+#MsgWnd_centralWidget {
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+#MsgWnd_pushButtonClose {
+  border: none;
+  image: url(:/client/images/close2.png);
+}
+
+#MsgWnd_labelTitle {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+}
+
+#MsgWnd_labelMsg {
+  font-size: 16px;
+  color: #000000;
+}
+
+
+/*compress option*/
+#compressOptionDialog_centralWidget {
+  border: none;
+  background-color: #ffffff;
+}
+
+#compressOptionDialog_widgetTitle {
+  border: none;
+  background-color: #E1F0FD;
+}
+
+#compressOptionDialog_lblTitle {
+  font-size: 12px;
+  color: #777777;
+}
+
+#compressOptionDialog_lblLogo {
+  image: url(:/images/images/logo.png);
+}
+
+#compressOptionDialog_pushButtonBrowser {
+  border: none;
+  image: url(:/images/images/folder.png);
+}
+
+#compressOptionDialog_pushButtonClose {
+  border: none;
+  image: url(:/images/images/close2.png);
+}
+
+#compressOptionDialog_pushButtonCompress {
+  border: none;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #55AAFF;
+}
+
+#compressOptionDialog_widgetPath {
+  border-radius: 8px;
+  border: 1px solid #D7E1EB;
+}
+
+#compressOptionDialog_lineEditPath {
+  border: none;
+  color: #333333;
+  font-size: 12px;
+}
+
+
+/*compress progress*/
+#compressProgressDialog_centralWidget {
+  border: none;
+  background-color: #ffffff;
+}
+
+#compressProgressDialog_widgetTitle {
+  border: none;
+  background-color: #E1F0FD;
+}
+
+#compressProgressDialog_lblTitle {
+  font-size: 12px;
+  color: #777777;
+}
+
+#compressProgressDialog_pushButtonClose {
+  border: none;
+  image: url(:/images/images/close2.png);
+}
+
+#compressProgressDialog_lblLogo {
+  image: url(:/images/images/logo.png);
+}
+
+#compressProgressDialog_labelCurrentFile {
+  font-size: 12px;
+  color: #333333;
+}
+
+#compressProgressDialog_pushButtonOK, #compressProgressDialog_pushButtonCancel {
+  border: none;
+  border-radius: 8px;
+  border: 1px solid #D7E1EB;
+  color: #333333;
+  font-size: 13px;
+}
+
+#compressProgressDialog_progressBar {
+  background: #E0EBF4;
+  border-radius: 5px;
+}
+
+#compressProgressDialog_progressBar:chunk {
+  background: #66BCFF;
+  border-radius: 5px;
+}
+
+/*tool widget*/
+#toolWidget_centralWidget {
+  border: 1px solid #D2E9FF;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+#toolWidget_toolTable {
+  border: none;
+  color: #000000;
+}
+
+#toolItem_labelName {
+  font-size: 12px;
+  color: #000000;
+}
+
+#compressOptionDialog_lblConfig {
+    color: #000000;
+  font-size: 13px;
+}
+
+#compressOptionDialog_radioButtonSpeed, #compressOptionDialog_radioButtonSize {
+  color: #333333;
+  font-size: 12px;
+}
+
+#compressOptionDialog_radioButtonSpeed::indicator:checked, #compressOptionDialog_radioButtonSize::indicator:checked {
+  image: url(:/images/images/radio_check.png);
+}
+
+#compressOptionDialog_radioButtonSpeed::indicator:unchecked, #compressOptionDialog_radioButtonSize::indicator:unchecked {
+  image: url(:/images/images/radio_uncheck.png);
+}
+
+
+/*about dialog*/
+#compressAboutDialog_centralWidget {
+  border: none;
+  background-color: #ffffff;
+}
+
+#compressAboutDialog_widgetTitle {
+  border: none;
+  background-color: #E1F0FD;
+}
+
+#compressAboutDialog_lblTitle {
+  font-size: 12px;
+  color: #777777;
+}
+
+#compressAboutDialog_lblLogo {
+  image: url(:/images/images/logo.png);
+}
+
+#compressAboutDialog_pushButtonClose {
+  border: none;
+  image: url(:/images/images/close2.png);
+}
+
+#compressAboutDialog_pushButtonOK {
+  border: none;
+  font-size: 14px;
+  color: #000000;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  border: 1px solid #D7E1EB;
+}
+
+#compressAboutDialog_lblLogoBig {
+  border: none;
+  image: url(:/images/images/logo_big.png);
+}
+
+#compressAboutDialog_lblMsg {
+  font-size: 12px;
+  color: #333333;
+}
+
+#compressAboutDialog_pushButtonLink {
+  border: none;
+  color: #58BDFF;
+  font-size: 12px;
+}

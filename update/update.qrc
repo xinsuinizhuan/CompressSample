@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/update">
+        <file>images/logo.ico</file>
+        <file>images/bk.png</file>
+        <file>images/close.png</file>
+        <file>images/min.png</file>
+        <file>images/radio_check.png</file>
+        <file>images/radio_uncheck.png</file>
+        <file>update.qss</file>
+        <file>images/check.png</file>
+        <file>images/uncheck.png</file>
+        <file>images/logo_empty.ico</file>
+    </qresource>
+</RCC>

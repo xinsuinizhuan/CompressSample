@@ -1,0 +1,41 @@
+<RCC>
+    <qresource prefix="/client">
+        <file>client.qss</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file>images/scrollbar_arrowdown_down.png</file>
+        <file>images/scrollbar_arrowdown_highlight.png</file>
+        <file>images/scrollbar_arrowdown_normal.png</file>
+        <file>images/scrollbar_arrowleft_down.png</file>
+        <file>images/scrollbar_arrowleft_highlight.png</file>
+        <file>images/scrollbar_arrowleft_normal.png</file>
+        <file>images/scrollbar_arrowright_down.png</file>
+        <file>images/scrollbar_arrowright_highlight.png</file>
+        <file>images/scrollbar_arrowright_normal.png</file>
+        <file>images/scrollbar_arrowup_down.png</file>
+        <file>images/scrollbar_arrowup_highlight.png</file>
+        <file>images/scrollbar_arrowup_normal.png</file>
+        <file>images/close.png</file>
+        <file>images/logo.png</file>
+        <file>images/max.png</file>
+        <file>images/min.png</file>
+        <file>images/del.png</file>
+        <file>images/desktop.png</file>
+        <file>images/extract_to.png</file>
+        <file>images/layout.png</file>
+        <file>images/new.png</file>
+        <file>images/onekey_extract.png</file>
+        <file>images/search.png</file>
+        <file>images/tool.png</file>
+        <file>images/up.png</file>
+        <file>images/down.png</file>
+        <file>images/file.png</file>
+        <file>images/folder.png</file>
+        <file>images/close2.png</file>
+        <file>images/rect.png</file>
+        <file>images/logo.ico</file>
+        <file>images/radio_check.png</file>
+        <file>images/radio_uncheck.png</file>
+        <file>images/logo_big.png</file>
+    </qresource>
+</RCC>
